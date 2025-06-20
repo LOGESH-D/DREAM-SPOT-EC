@@ -198,7 +198,7 @@ export const products = {
   sweets
 };
 
-// Featured products for homepage
+// Featured products 
 export const featured_products = [
   {
     name: "Kuchi Chips",

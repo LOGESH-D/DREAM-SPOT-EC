@@ -1,26 +1,23 @@
 import React from "react";
-import { Heart, Award, Users, Clock } from "lucide-react";
-
+import { Heart, Award, Users, Clock, Quote } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function About() {
   return (
     <div className="relative min-h-screen bg-rose-300">
-      {/* Single Background Image with Opacity for entire page */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10 z-0"
         style={{
-          backgroundImage: `url(${"/general/TTSW.png"})`, // Replace with your image path
+          backgroundImage: `url(${"/general/TTSW.png"})`,
         }}
       ></div>
-
-      {/* Content Overlay */}
       <div className="relative z-10 container mx-auto px-4 py-8">
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="font-serif text-4xl md:text-5xl font-bold text-orange-900 mb-6 animate-in slide-in-from-top duration-1000">
             Authentic Tamil Nadu Snacks & Sweets
           </h1>
-          <p className="uppercase text-xl text-orange-700">
+          <p className="uppercase text-xl text-orange-700 mb-6">
             Crafted with Tradition, Served with Love!
           </p>
           <div className="max-w-4xl mx-auto">
@@ -31,10 +28,16 @@ export default function About() {
               your plate.
             </p>
           </div>
+
+          <Link
+            to="/menu"
+            className="inline-block mt-8 px-6 py-3 rounded-full bg-orange-700 text-white font-semibold hover:bg-orange-800 transition duration-300 shadow-lg animate-in slide-in-from-bottom delay-500"
+          >
+            Explore Our Menu
+          </Link>
         </div>
 
-        {/* Main Content */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16">
           <div className="space-y-6 animate-in slide-in-from-left duration-1000">
             <p className="font-serif text-gray-700 leading-relaxed">
               From crispy murukkus to melt-in-mouth adhirasams, every bite is a
@@ -73,16 +76,16 @@ export default function About() {
           </div>
 
           <div className="relative animate-in slide-in-from-right duration-1000 delay-300">
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <img
                 src="/general/SW.jpg"
-                alt="TraditionalTamilsweets"
+                alt="Traditional Tamil sweets"
                 className="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"
               />
               <img
                 src="/general/Family.png"
                 alt="Family enjoying meal"
-                className="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 mt-8"
+                className="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 sm:mt-8"
               />
             </div>
           </div>
@@ -130,6 +133,42 @@ export default function About() {
                 </div>
                 <h3 className="text-xl font-bold mb-2">{value.title}</h3>
                 <p className="text-gray-600">{value.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Testimonials Section */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
+            What Our Customers Say
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                name: "Priya S.",
+                comment:
+                  "Absolutely love their adhirasam and mixture! Brings back childhood memories every time.",
+              },
+              {
+                name: "Arun K.",
+                comment:
+                  "The flavors are so authentic. Perfect blend of tradition and taste!",
+              },
+              {
+                name: "Divya R.",
+                comment:
+                  "Prompt delivery, fresh snacks, and amazing packaging. Highly recommended!",
+              },
+            ].map((review, index) => (
+              <div
+                key={review.name}
+                className="p-6 bg-white rounded-lg shadow-md text-gray-700 animate-in slide-in-from-bottom duration-1000"
+                style={{ animationDelay: `${index * 200}ms` }}
+              >
+                <Quote className="w-6 h-6 text-orange-600 mb-2" />
+                <p className="italic mb-4">"{review.comment}"</p>
+                <p className="font-bold text-orange-800">— {review.name}</p>
               </div>
             ))}
           </div>

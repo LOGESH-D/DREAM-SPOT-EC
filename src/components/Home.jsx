@@ -1,9 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Star, Heart, Award } from "lucide-react";
-// import FT from "../assets/FT.png";
-// import HS from "../assets/HS.png";
-import { featured_products } from "../datas/Products"; // Adjust path as needed
+import { featured_products } from "../datas/Products"; 
 
 export default function Home() {
   return (
@@ -96,7 +94,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Products */}
       <section className="py-16 bg-[#B33949]">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center text-white mb-12">
@@ -122,12 +119,6 @@ export default function Home() {
                   <p className="text-orange-600 font-bold text-xl">
                     Rs.{product.price}
                   </p>
-                  {/* <Link
-                    to="/menu"
-                    className="mt-3 w-full bg-orange-600 text-white py-2 px-4 rounded-lg hover:bg-orange-700 transition-colors duration-300 inline-block text-center"
-                  >
-                    Order Now
-                  </Link> */}
                 </div>
               </div>
             ))}
@@ -135,7 +126,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Call to Action */}
       <section className="py-16 bg-rose-400 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-4">

@@ -2,17 +2,16 @@ import { useState } from "react";
 import { Star, Plus, ChevronLeft, ChevronRight } from "lucide-react";
 import { useCart } from "../context/CartContext";
 import { snacks, sweets } from "../datas/Products";
-import { useNavigate } from "react-router-dom"; // Add this import
+import { useNavigate } from "react-router-dom";
 
 export default function Menu() {
   const [activeCategory, setActiveCategory] = useState("snacks");
   const [currentPage, setCurrentPage] = useState(0);
   const { addToCart } = useCart();
-  const navigate = useNavigate(); // Add this hook
+  const navigate = useNavigate(); 
 
   const currentProducts = activeCategory === "snacks" ? snacks : sweets;
 
-  // Calculate products per page (2 rows × 4 columns = 8 products)
   const productsPerPage = 8;
   const totalPages = Math.ceil(currentProducts.length / productsPerPage);
   const startIndex = currentPage * productsPerPage;
@@ -25,7 +24,7 @@ export default function Menu() {
 
   const handleBuyNow = (product) => {
     addToCart({ ...product, quantity: 1 });
-    navigate("/cart"); // Navigate to cart page
+    navigate("/cart"); 
   };
 
   const nextPage = () => {
@@ -42,7 +41,7 @@ export default function Menu() {
 
   const handleCategoryChange = (category) => {
     setActiveCategory(category);
-    setCurrentPage(0); // Reset to first page when changing category
+    setCurrentPage(0); 
   };
 
   const renderStars = (rating) => {
@@ -97,7 +96,6 @@ export default function Menu() {
 
       {/* Products Grid with Navigation */}
       <div className="relative">
-        {/* Products Grid - Limited to 2 rows */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {displayedProducts.map((product, index) => (
             <div

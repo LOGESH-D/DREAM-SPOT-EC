@@ -20,7 +20,7 @@ export default function Header() {
     <header className="bg-orange-200 shadow-lg sticky top-0 z-50 rounded-lg">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap items-center justify-between py-2">
-          {/* Logo */}
+
           <Link to="/" className="flex items-center space-x-2">
             <img
               src="/general/DS-Logo.png"
