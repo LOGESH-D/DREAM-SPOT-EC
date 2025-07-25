@@ -3,5 +3,8 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [react(),tailwindcss(),],
-  base: '/dream-spot-ec',
+  base: '/DREAM-SPOT-EC/',
+  build: {
+    outDir: 'dist'
+  }
 })
