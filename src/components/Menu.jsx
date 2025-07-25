@@ -105,7 +105,7 @@ export default function Menu() {
             >
               <div className="relative flex justify-center items-center p-2">
                 <img
-                  src={product.image}
+                  src={`${import.meta.env.BASE_URL}${product.image}`}
                   alt={product.name}
                   className="w-full h-[160px] object-cover rounded-xl shadow-md"
                 />

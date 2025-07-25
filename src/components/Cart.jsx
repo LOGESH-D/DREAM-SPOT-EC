@@ -79,7 +79,7 @@ export default function Cart() {
             >
               <div className="flex flex-col md:flex-row gap-6">
                 <img
-                  src={item.image || "/placeholder.svg"}
+                  src={`${import.meta.env.BASE_URL}${item.image || 'placeholder.svg'}`}
                   alt={item.name}
                   className="w-full md:w-32 h-32 object-cover rounded-lg"
                 />

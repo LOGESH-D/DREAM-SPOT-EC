@@ -39,14 +39,14 @@ export default function Home() {
             <div className="relative animate-in slide-in-from-right duration-1000 delay-300">
               <div className="grid grid-cols-2 gap-4">
                 <img
-                  src="/general/FT.png"
+                  src={`${import.meta.env.BASE_URL}general/FT.png`}
                   height={200}
                   width={200}
                   alt="Tamil Nadu Snacks"
                   className="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"
                 />
                 <img
-                  src="/general/HS.png"
+                  src={`${import.meta.env.BASE_URL}general/HS.png`}
                   height={200}
                   width={200}
                   alt="Traditional Sweets"
@@ -108,7 +108,7 @@ export default function Home() {
               >
                 <div className="relative flex justify-center items-center p-4 ">
                   <img
-                    src={product.image}
+                    src={`${import.meta.env.BASE_URL}${product.image}`}
                     alt={product.name}
                     className="w-[200px] h-[200px] object-cover rounded-xl shadow-md"
                   />

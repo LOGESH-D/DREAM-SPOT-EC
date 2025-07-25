@@ -88,7 +88,7 @@ export default function Orders() {
                   className="flex flex-col md:flex-row gap-4 p-4 bg-gray-50 rounded-lg"
                 >
                   <img
-                    src={item.image || "/placeholder.svg"}
+                    src={`${import.meta.env.BASE_URL}${item.image || 'placeholder.svg'}`}
                     alt={item.name}
                     className="w-full md:w-24 h-24 object-cover rounded-lg"
                   />

@@ -78,12 +78,12 @@ export default function About() {
           <div className="relative animate-in slide-in-from-right duration-1000 delay-300">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <img
-                src="/general/SW.jpg"
+                src={`${import.meta.env.BASE_URL}general/SW.jpg`}
                 alt="Traditional Tamil sweets"
                 className="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"
               />
               <img
-                src="/general/Family.png"
+                src={`${import.meta.env.BASE_URL}general/Family.png`}
                 alt="Family enjoying meal"
                 className="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 sm:mt-8"
               />

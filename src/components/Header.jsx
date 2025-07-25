@@ -23,7 +23,7 @@ export default function Header() {
 
           <Link to="/" className="flex items-center space-x-2">
             <img
-              src="/general/DS-Logo.png"
+              src={`${import.meta.env.BASE_URL}general/DS-Logo.png`}
               alt="Dream Spot Logo"
               className="h-14 object-contain"
             />
