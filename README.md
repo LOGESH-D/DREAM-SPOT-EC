@@ -87,9 +87,12 @@ Dream-Spot-Ec/
 - **Images**: Add product images to the appropriate folders in `public/`.
 - **Branding**: Update logo and site name in `src/components/Header.jsx` and `public/general/DS-Logo.png`.
 
-## License
 
-This project is for educational/demo purposes. For commercial use, please customize and review all content.
+---
+
+## Developer
+
+Developed by **LOKIiii**
 
 ---
 
